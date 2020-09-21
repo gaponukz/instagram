@@ -10,7 +10,8 @@
         fetch('https://www.instagram.com/__zhenyagaponyuk/?__a=1')
         .then(response => response.json())
         .then(data => {
-            document.documentElement.innerHTML = data.graphql.user.biography
+            document.contentType = 'application/json; charset=utf-8'
+            document.documentElement.innerHTML = JSON.stringify(data)
         })
     </script>
 </body>
